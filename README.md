@@ -12,6 +12,12 @@ The litechess model is based on the DeepChess neural network model that has two 
 - An autoencoder for identifying features relevant to position evaluation
 - A Siamese network that evaluates positions
 
+The autoencoder can be a vanilla autoencoder, or can be trained using self-supervision methods. We propose two methods:
+- Removing Pieces Approach
+- Evaluation Score Regression
+
+The code for both has been included in the litechess-model folder.
+
 ### Litechess Engine Backend
 The litechess engine backend is a modified version of Sunfish's chess engine backend. [Sunfish](https://github.com/thomasahle/sunfish) is a popular chess engine written in Python whose evaluation function is a simple piece-square mapping. We change this evaluation function to our litechess neural network.
 
